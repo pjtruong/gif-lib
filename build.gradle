@@ -11,7 +11,7 @@ group 'com.pjtruong'
 version '1.0-SNAPSHOT'
 
 
-sourceCompatibility = 1.5
+
 
 repositories {
     mavenCentral()

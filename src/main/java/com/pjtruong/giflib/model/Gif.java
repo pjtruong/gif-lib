@@ -12,13 +12,18 @@ public class Gif {
     private LocalDate dateUploaded;
     private String username;
     private boolean favorite;
+    private int categoryId;
 
 
-    public Gif(String name, LocalDate dateUploaded, String username, boolean favorite) {
+
+
+
+    public Gif(String name, LocalDate dateUploaded, String username, boolean favorite, int categoryId) {
         this.name = name;
         this.dateUploaded = dateUploaded;
         this.username = username;
         this.favorite = favorite;
+        this.categoryId = categoryId;
     }
 
     public String getName() {
@@ -52,4 +57,13 @@ public class Gif {
     public void setFavorite(boolean favorite) {
         this.favorite = favorite;
     }
+
+    public int getCategoryId() {
+        return categoryId;
+    }
+
+    public void setCategoryId(int categoryId) {
+        this.categoryId = categoryId;
+    }
+
 }
