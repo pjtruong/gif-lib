@@ -10,7 +10,7 @@
     <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons" />
     <link rel="stylesheet" th:href="@{/app.css}" />
 
-    <title>giflib | Home</title>
+    <title>giflib | Favorites</title>
 </head>
 <body>
     <div class="navbar-fixed">
@@ -46,14 +46,11 @@
     <div class="gifs container">
         <div class="row">
             <div th:each="gif : ${gifs}" class="col s12 l4">
-                <a th:href="@{'/gif/' + ${gif.name}}">
-                    <img th:src="@{'/gifs/' + ${gif.name} + '.gif'}" />
-
-                    <a href="#" th:class="(${gif.favorite} ? 'un' : '') + 'mark favorite'"></a>
+                <a th:href="@{|/gif/${gif.name}|}">
+                    <img th:src="@{|/gifs/${gif.name}.gif|}" />
+                    <a href="#" th:class="(${gif.favorite}? 'un' : '') + 'mark favorite'"></a>
                 </a>
             </div>
-
-
         </div>
     </div>
 

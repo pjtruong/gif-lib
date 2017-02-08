@@ -55,4 +55,33 @@ public class GifRepository {
     }
 
 
+    public List<Gif> fetchFavroite()
+    {
+        List<Gif> gifs = new ArrayList<>();
+
+        for(Gif gif : ALL_GIFS)
+        {
+            if(gif.isFavorite() == true)
+            {
+                gifs.add(gif);
+            }
+        }
+        return gifs;
+    }
+
+    public List<Gif> searchResult(String str)
+    {
+        List<Gif> gifs = new ArrayList<>();
+
+        for(Gif gif : ALL_GIFS)
+        {
+            if(gif.getName().contains(str.toLowerCase()))
+            {
+                gifs.add(gif);
+            }
+        }
+        return gifs;
+    }
+
+
 }
